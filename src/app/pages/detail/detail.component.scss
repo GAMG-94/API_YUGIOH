@@ -1,0 +1,61 @@
+.detail-card {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: rgb(37, 37, 37);
+  margin: 2em;
+  border-radius: 20px;
+  font-family: 'Russo One', 'sans-serif';
+  letter-spacing: 1px;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (min-width: 880px) {
+    font-size: 16px;
+    flex-direction: row;
+  }
+
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+
+    img {
+      max-width: 350px;
+      width: 100%;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    padding: 2em;
+
+    h2 {
+      color: rgb(255, 174, 0);
+    }
+
+    .title {
+      color: rgb(255, 174, 0);
+    }
+  }
+
+  .items {
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .table {
+    max-width: 500px;
+    width: 100%;
+    background-color: rgb(112, 112, 112);
+    text-align: center;
+    font-family: 'Roboto';
+  }
+}

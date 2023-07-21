@@ -1,0 +1,31 @@
+<div class="detail-card" *ngIf="card$ | async as card">
+  <div class="top">
+    <img [src]="card.card_images[0].image_url">
+  </div>
+  <div class="bottom">
+    <h2>{{ card.name }}</h2>
+    <div class="items">
+      <p class="description">{{ card.desc }}</p>
+   </div>
+    <div class="items">
+       <h3 class="title">TIPO</h3>
+       <p class="description">{{card.type}}</p>
+    </div>
+    <div class="items">
+       <h3 class="title">RAZA</h3>
+       <p class="description">{{ card.race }}</p>
+    </div>
+    <table class="table">
+      <thead>
+        <th>Market</th>
+        <th>Price</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let market of card.card_prices[0] | keyvalue">
+          <th>{{market.key | marketName }}</th>
+          <td>{{market.value}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<div
+  class="list"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="100"
+  (scrolled)="onScroll()">
+
+  <h2>API DE YU-GI-OH!!!</h2>
+  <input class="form-control" type="text" placeholder="Buscar carta" [formControl]="cardTextFC">
+
+  <div class="cards">
+    <app-card *ngFor="let card of cards" [card]="card"></app-card>
+  </div>
+</div>
